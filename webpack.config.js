@@ -36,4 +36,5 @@ module.exports = {
     hot: true, // Enables hot module replacement (HMR)
     watchFiles: ['src/**/*.html'], // Watches for changes in HTML
   },
+  devtool: 'source-map',
 };

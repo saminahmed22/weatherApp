@@ -30,7 +30,7 @@
     "lint:fix": "eslint src --ext .js --fix",
     "format": "prettier --write ."
   },
-  "name": "respage",
+  "name": "weatherapp",
   "version": "1.0.0",
   "main": "webpack.config.js",
   "dependencies": {
