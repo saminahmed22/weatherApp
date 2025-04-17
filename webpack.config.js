@@ -1,39 +1,39 @@
 // webpack.config.js
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  entry: "./src/index.js",
+  mode: 'development',
+  entry: './src/index.js',
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/template.html",
+      template: './src/template.html',
     }),
   ],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.html$/i,
-        loader: "html-loader",
+        loader: 'html-loader',
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        type: 'asset/resource',
       },
     ],
   },
   devServer: {
-    static: path.resolve(__dirname, "dist"),
+    static: path.resolve(__dirname, 'dist'),
     hot: true, // Enables hot module replacement (HMR)
-    watchFiles: ["src/**/*.html"], // Watches for changes in HTML
+    watchFiles: ['src/**/*.html'], // Watches for changes in HTML
   },
 };
